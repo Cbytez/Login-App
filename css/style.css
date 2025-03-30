@@ -245,7 +245,7 @@ h2.hero {
 
 .login-form-container form button[type='submit']:hover {
     background-color: lightgreen;
-    color: black;
+    color: white;
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 5px;

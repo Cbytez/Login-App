@@ -1,18 +1,32 @@
-<?php include "db.php"; ?>
-
 <?php
-    if(isset($_POST['login'])){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
 
+    include 'db.php';
+    
+    $error = "";
+   
+    //Redirect if the user is already logged in.
+    if(isset($_SESSION['username'])){
+        header('Location: index.php');
+    }
+    
+    //Login form handling.
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $username = mysqli_real_escape_string($dbs, $_POST['username']);
+        $password = mysqli_real_escape_string($dbs, $_POST['password']);
+        
+        //Check if the username and password exist in the database.
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+        
         $result = mysqli_query($dbs, $sql);
+        
         if(mysqli_num_rows($result) === 1){
-            header("Location: index.php");
-        }else{
-            echo "<script>alert('Invalid username or password');</script>";
+            $_SESSION['username'] = $username;
+            header('Location: index.php');
+        } else {
+            $error = "Invalid username or password";
         }
     }
+    mysqli_close($dbs);   
 ?>
 
 <!DOCTYPE html>
