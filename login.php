@@ -19,7 +19,7 @@
         $password = mysqli_real_escape_string($dbs, $_POST['password']);
         
         //Check if the username and password exist in the database.
-        $sql = "SELECT * FROM users WHERE username = '$username' LIMIT 1";
+        $sql = "SELECT * FROM users WHERE username='$username' LIMIT 1";
         
         $result = mysqli_query($dbs, $sql);
         
@@ -27,9 +27,11 @@
             $user = mysqli_fetch_assoc($result);
             
             //Check if the password is correct.
-            if(password_verify($password, $user['password'] )){
-                echo "OK";
-                exit;
+            if(password_verify($password, $user['password'])){
+                //Login successful.
+                $_SESSION['username'] = $username;
+                header('Location: index.php');
+                exit;                
             }else{
                 echo "Incorrect password";
             }
