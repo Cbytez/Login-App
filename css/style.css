@@ -181,6 +181,66 @@ body.login form label {
     color: #555;
 }
 
+/* Footer */
+body.footer {
+    background-color: #333;
+    color: lightgreen;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+body.footer p {
+    margin-bottom: 0;
+}
+
+.form-button{
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    
+
+}
+
+.form-container{
+    background-image: linear-gradient(to right bottom, #d16ba5, #bf69ae, #aa68b5, #9068bb, #7269be, #5a72c5, #3d79c9, #0080ca, #0090ce, #009ece, #00accb, #2bb8c6);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+h2.form-container {
+    color: lightgreen;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-container input[type='text'],
+.form-container input[type='email'],
+.form-container input[type='password'] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    background-color: #fff;
+}
+
 h2.hero {
     color: lightgreen;
     font-size: 2rem;

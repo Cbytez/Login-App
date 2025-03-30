@@ -1,7 +1,7 @@
 <?php
 
     include 'db.php';
-
+    session_start();
     $error = "";
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -91,7 +91,7 @@
                 <label for="confirm_password">Confirm Password:</label>
                 <input placeholder="Confirm your password" type="password" name="confirm_password" required>
                 <br>
-                <input type="submit" value="Register">
+                <button class="form-button" value="register">Register</button>
             </form>
         </div>
     </div>
