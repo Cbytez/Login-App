@@ -39,7 +39,7 @@
                     $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email')";
 
                     if(mysqli_query($dbs, $sql)){
-                        echo "DATA INSERTED";
+                        echo "User Added successfully";
                     }else{
                         echo "Error: NOT INSERTED". mysqli_error($dbs);
                     }

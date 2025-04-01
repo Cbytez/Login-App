@@ -1,43 +1,45 @@
 <?php
-
     include 'db.php';
 
     session_start();
 
-    // $error = "";   
-
-    //Check if the user is already logged in.
-    if(isset($_SESSION['username'])){
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
         header('Location: index.php');
         exit;
-    }    
-    
+    }
 
-    //Login form handling.
+    $error = "";
+    
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $username = mysqli_real_escape_string($dbs, $_POST['username']);
         $password = mysqli_real_escape_string($dbs, $_POST['password']);
-        
-        //Check if the username and password exist in the database.
-        $sql = "SELECT * FROM users WHERE username='$username' LIMIT 1";
-        
+     
+        $sql = "SELECT * FROM users WHERE username = '$username' LIMIT 1";
         $result = mysqli_query($dbs, $sql);
-        
+        $row = mysqli_fetch_assoc($result);
+
         if(mysqli_num_rows($result) === 1){
             $user = mysqli_fetch_assoc($result);
-            
-            //Check if the password is correct.
+
             if(password_verify($password, $user['password'])){
-                //Login successful.
-                $_SESSION['username'] = $username;
+                $_SESSION['logged_in'] = true;
+                $_SESSION['username'] = $user['username'];
                 header('Location: index.php');
-                exit;                
+                exit;
             }else{
-                echo "Incorrect password";
+                $error = "Invalid usernamez or passwordz";
             }
+            
+            
+        }else{
+            $error = "Invalid username or password";
         }
-    } 
-    mysqli_close($dbs);   
+
+        
+
+    }
+    
+    
 ?>
 
 <!DOCTYPE html>
