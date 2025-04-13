@@ -10,7 +10,7 @@
 
     $error = "";
     
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if(isset($_POST['login'])){
         $username = mysqli_real_escape_string($dbs, $_POST['username']);
         $password = mysqli_real_escape_string($dbs, $_POST['password']);
      
@@ -24,7 +24,8 @@
             if(password_verify($password, $user['password'])){
                 $_SESSION['logged_in'] = true;
                 $_SESSION['username'] = $user['username'];
-                header('Location: index.php');
+                echo "Login successful";
+                // header('Location: index.php');
                 exit;
             }else{
                 $error = "Invalid username or password";
