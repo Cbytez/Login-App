@@ -67,7 +67,7 @@
                 <button type="submit" name="login">Login</button>
                 <br><br>
                 <p class="register-link">Don't have an account? <a href="register.php">Register</a></p>                
-                
+                <a href="logout.php">Logout</a>
             </form>
         </div>
     </div>
