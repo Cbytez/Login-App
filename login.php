@@ -10,21 +10,20 @@
 
     $error = "";
     
-    if(isset($_POST['login'])){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $username = mysqli_real_escape_string($dbs, $_POST['username']);
         $password = mysqli_real_escape_string($dbs, $_POST['password']);
      
-        $sql = "SELECT * FROM users WHERE username = '$username' LIMIT 1";
+        $sql = "SELECT * FROM users WHERE username ='$username' LIMIT 1";
         $result = mysqli_query($dbs, $sql);
-        $row = mysqli_fetch_assoc($result);
+        
 
         if(mysqli_num_rows($result) === 1){
             $user = mysqli_fetch_assoc($result);
 
-            if($row && password_verify($password, $row['password'])){
+            if(password_verify($password, $user['password'])){
                 $_SESSION['logged_in'] = true;
-                $_SESSION['username'] = $row['username'];
-                $_SESSION['user_id'] = $row['id'];
+                $_SESSION['username'] = $user['username'];
                 header('Location: index.php');
                 exit;
             }else{
@@ -33,7 +32,7 @@
             
             
         }else{
-            $error = "Invalid username or password";
+            $error = "Invalid username";
         }
 
         
