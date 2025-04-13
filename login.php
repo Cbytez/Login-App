@@ -21,13 +21,14 @@
         if(mysqli_num_rows($result) === 1){
             $user = mysqli_fetch_assoc($result);
 
-            if(password_verify($password, $user['password'])){
+            if($row && password_verify($password, $row['password'])){
                 $_SESSION['logged_in'] = true;
-                $_SESSION['username'] = $user['username'];
+                $_SESSION['username'] = $row['username'];
+                $_SESSION['user_id'] = $row['id'];
                 header('Location: index.php');
                 exit;
             }else{
-                $error = "Invalid usernamez or passwordz";
+                $error = "Invalid username or password";
             }
             
             
