@@ -4,7 +4,7 @@
     session_start();
 
     if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
-        header('Location: index.php');
+        header('Location: admin.php');
         exit;
     }
 
@@ -21,19 +21,18 @@
         if(mysqli_num_rows($result) === 1){
             $user = mysqli_fetch_assoc($result);
 
+            // var_dump($user);
+
             if(password_verify($password, $user['password'])){
                 $_SESSION['logged_in'] = true;
                 $_SESSION['username'] = $user['username'];
-                echo "Login successful";
-                // header('Location: index.php');
-                exit;
+                header('Location: index.php');
             }else{
-                $error = "Invalid username or password";
-            }
-            
+                $error = "Invalid Password!";
+            }            
             
         }else{
-            $error = "Invalid username";
+            $error = "User Not Found!";
         }
 
         
@@ -56,6 +55,9 @@
         <div class="login-form-container">
             <form method="POST" action="">
                 <h2>Login</h2>
+                <?php if(!empty($error)): ?>
+                    <p class="error"><?php echo $error; ?></p>
+                <?php endif; ?>
                 <label for="username">Username</label>
                 <input type="text" name="username" placeholder="Username" autofocus required>
                 <br><br>
