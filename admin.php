@@ -7,11 +7,11 @@
         exit;
     }
 
-    $sql = "SELECT * FROM users";
-    $result = mysqli_query($dbs, $sql);
-    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    // $sql = "SELECT * FROM users";
+    // $result = mysqli_query($dbs, $sql);
+    // $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
     
-    var_dump($users);
+    // var_dump($users);
 ?>
 
 <!DOCTYPE html>

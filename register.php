@@ -16,16 +16,15 @@
             $error = "Passwords do not match";
         }else{
 
-            //Check if username and email already exist in the database.
+            //Check if username already exist in the database.
             $sql = "SELECT * FROM users WHERE username = '$username' LIMIT 1";
             $result = mysqli_query($dbs, $sql);
 
             if(mysqli_num_rows($result) === 1){
                 $error = "Username already exists, Please choose another.";
             }else{
-                $password = password_hash($password, PASSWORD_DEFAULT);
                 
-                //Check if username and email already exist in the database
+                //Check if email already exist in the database
                 $sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
                 $result = mysqli_query($dbs, $sql);
 
@@ -34,9 +33,9 @@
 
                 }else{
                     //Hash the password and insert the data into the database.
-                    $password = password_hash($password, PASSWORD_DEFAULT);
+                    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
-                    $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email')";
+                    $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$passwordHash', '$email')";
 
                     if(mysqli_query($dbs, $sql)){
                         echo "User Added successfully";
@@ -92,6 +91,9 @@
                 <input placeholder="Confirm your password" type="password" name="confirm_password" required>
                 <br>
                 <button class="form-button" value="register">Register</button>
+                <br>
+                <br>
+                <p>Already have an account? <a href="login.php">Login</a></p>
             </form>
         </div>
     </div>
