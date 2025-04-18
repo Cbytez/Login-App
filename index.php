@@ -25,5 +25,5 @@
             </div>
     </p>
     </div>
-</body>
-</html>
+
+<?php include "partials/footer.php"; ?>

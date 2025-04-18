@@ -7,11 +7,7 @@
         exit;
     }
 
-    // $sql = "SELECT * FROM users";
-    // $result = mysqli_query($dbs, $sql);
-    // $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    
-    // var_dump($users);
+   
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +19,9 @@
 </head>
 <body>
     <h1>Hello Admin <?php echo $_SESSION['username']; ?></h1>
-
+    <br>
+    <a href="index.php">Home</a>
+    <br>
     <a href="logout.php">Logout</a>
 </body>
 </html>
