@@ -17,8 +17,10 @@
     <div class="container">
         <div class="admin-navbar">
             <div class="admin-ul">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                    <li><a href="admin.php" class="active">Admin</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                
             </div>
         </div>
         <div class="admin-main">
@@ -29,3 +31,4 @@
 
 
 <?php include "partials/footer.php"; ?>
+

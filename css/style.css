@@ -1,5 +1,6 @@
 /* General Styles */
 
+
 .admin-navbar {
     background-color: #299aeb;
     color: lightgreen;
@@ -34,10 +35,16 @@
     color: #000;
 }
 
+.admin-ul li a.active {
+    background-color: #299aeb;
+    color: #000;
+    text-decoration: underline;
+}
+
 .admin-main {
     background-color: transparent;
     color: lightgreen;
-    
+
 }
 
 .admin-main h1 {
@@ -85,6 +92,11 @@ body {
     background-color: #ff6b6b;
 }
 
+.button a.active {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+   
+}
+
 .container {
     margin: 10px;
 }
@@ -99,10 +111,13 @@ body.index .container {
 }
 
 /* Hero Section */
-body.index .hero {
+body .hero .hero-image {
     background-image: url("../images/hero-image.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-blend-mode: darken;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -377,7 +392,7 @@ h2.hero {
 }
 
 /* Navigation */
-nav {
+.nav {
     background-color: #333;
     display: flex;
     justify-content: center;
@@ -387,18 +402,18 @@ nav {
     z-index: 1000;
 }
 
-nav ul {
+.nav ul {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+.nav ul li {
     margin: 0 10px;
 }
 
-nav ul li a {
+.nav ul li a {
     display: block;
     color: white;
     padding: 14px 20px;
@@ -409,12 +424,12 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav ul li a:hover {
     background-color: #575757;
     color: white;
 }
 
-nav ul li a.active {
+.nav ul li a.active {
     background-color: #575757;
     color: yellow;
 }
@@ -436,3 +451,40 @@ nav ul li a.active {
 .register-link a:hover {
     color: #000;
 }
+
+.ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ul li {
+    margin: 0 10px;
+}
+
+.ul li a {
+    display: block;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.ul li a:hover {
+    background-color: #575757;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: white;
+}
+
+.ul li a.active {
+    background-color: #575757;
+    color: yellow;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+

@@ -1,25 +1,40 @@
-
+<?php 
+    $current_page = basename($_SERVER['PHP_SELF']);
+    
+?>
 <div class="container">
     <p>
         <div class="button-container">
-            <div class="button">
-                <a href="login.php">Login</a>
-            </div>
-            <div class="button">
+            <div class="ul">
+                    <li><a class="<?php
+                    
+                    if($current_page == 'index.php') {
+                        echo 'active';
+                    }
+                    
+                    ?>" href="index.php">Home</a></li>
+            
+                <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == false): ?>
+           
+                    <li><a href="login.php">Login</a></li>
+           
+           
                 <a href="register.php">Register</a>
-            </div>
+            
+                <?php endif; ?>
 
-            <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>   
-                <div class="button">
-                    <a href="admin.php">Admin</a>
-                </div>
-            <?php endif; ?>
+                <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>   
+                    <li><a href="admin.php">Admin</a></li>
+                
+                <?php endif; ?>
 
-            <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
-                <div class="button">
-                    <a href="logout.php">Logout</a>
-                </div>
-            <?php endif; ?>
+                <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
+                
+                    <li><a href="logout.php">Logout</a></li>
+               
+                <?php endif; ?>
+
+            </ul>
         </div>
     </p>
 </div>
