@@ -1,4 +1,65 @@
 /* General Styles */
+
+.admin-navbar {
+    background-color: #299aeb;
+    color: lightgreen;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.admin-ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.admin-ul li {
+    margin: 0 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.admin-ul li a {
+    color: lightgreen;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.admin-ul li a:hover {
+    color: #000;
+}
+
+.admin-main {
+    background-color: transparent;
+    color: lightgreen;
+    
+}
+
+.admin-main h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.admin-main a {
+    color: lightgreen;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.admin-main a:hover {
+    color: #000;
+}
+
+
+
 body {
     background-color: #000;
     color: lightgreen;
