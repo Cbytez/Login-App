@@ -8,9 +8,7 @@
             <div class="ul">
                     <li><a class="<?php
                     
-                    if($current_page == 'index.php') {
-                        echo 'active';
-                    }
+                    echo $current_page == 'index.php' ? 'active' : '';
                     
                     ?>" href="index.php">Home</a></li>
             
