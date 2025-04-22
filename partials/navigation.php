@@ -12,7 +12,7 @@
                     
                     ?>" href="index.php">Home</a></li>
             
-                <?php if(isset($_SESSION['logged_in']) || $_SESSION['logged_in'] == false): ?>
+                <?php if(!isLoggedIn()): ?>
            
                     <li><a class="<?php echo setActiveClass('login.php'); ?>" href="login.php">Login</a></li>
            

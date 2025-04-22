@@ -111,7 +111,7 @@ body.index .container {
 }
 
 /* Hero Section */
-body .hero .hero-image {
+body.index .hero .hero-image {
     background-image: url("../images/hero-image.png");
     background-size: cover;
     background-position: center;
@@ -128,7 +128,7 @@ body .hero .hero-image {
     z-index: 1;
 }
 
-.hero::before {
+body.index .hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -145,6 +145,11 @@ body.index .hero .hero-content {
 
 body.index .hero .hero-content h1 {
     font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+body.index .hero .hero-content h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
@@ -378,13 +383,13 @@ h2.hero {
 }
 
 .login-form-container form label {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: lightgreen;
 }
 
     .login-form-container form input[type='text'],
 .login-form-container form input[type='password'] {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 75%;
     padding: 10px;
     margin-bottom: 20px;
@@ -395,7 +400,7 @@ h2.hero {
     width: 100%;
     padding: 14px;
     background-image: linear-gradient(to right bottom, #d16ba5, #bf69ae, #aa68b5, #9068bb, #7269be, #5a72c5, #3d79c9, #0080ca, #0090ce, #009ece, #00accb, #2bb8c6);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: white;
 }
@@ -403,7 +408,7 @@ h2.hero {
 .login-form-container form button[type='submit']:hover {
     background-color: lightgreen;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -421,8 +426,6 @@ h2.hero {
 
 .login-link:hover{
     color: #000;
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
 /* Navigation */

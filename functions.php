@@ -7,7 +7,9 @@ function setActiveClass($pageName){
     return  ($current_page === $pageName) ? 'active' : '';
 }
 
-
+function isLoggedIn(){
+    return isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
+}
 
 
 ?>
