@@ -1,5 +1,5 @@
 <?php
-
+    
     include 'db.php';
     session_start();
     $error = "";
@@ -93,10 +93,9 @@
                 <button class="form-button" value="register">Register</button>
                 <br>
                 <br>
-                <p>Already have an account? <a href="login.php">Login</a></p>
+                <p>Already have an account? <a class="login-link" href="login.php"> Login</a></p>
             </form>
         </div>
     </div>
 </body>
-
 </html>

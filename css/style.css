@@ -257,6 +257,14 @@ body.login form label {
     color: #555;
 }
 
+body.register-link{
+    color: lightgreen;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
 /* Footer */
 body.footer {
     background-color: #333;
@@ -275,21 +283,34 @@ body.footer p {
 
 .form-button{
     background-color: #333;
-    color: white;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     margin-right: 10px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
     
 
+}
+
+.form-button:hover{
+    background-color: #d16ba5;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .form-container{
     background-image: linear-gradient(to right bottom, #d16ba5, #bf69ae, #aa68b5, #9068bb, #7269be, #5a72c5, #3d79c9, #0080ca, #0090ce, #009ece, #00accb, #2bb8c6);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
     width: 100%;
     max-width: 400px;
     margin: 10px auto;
@@ -357,13 +378,13 @@ h2.hero {
 }
 
 .login-form-container form label {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: lightgreen;
 }
 
     .login-form-container form input[type='text'],
 .login-form-container form input[type='password'] {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     width: 75%;
     padding: 10px;
     margin-bottom: 20px;
@@ -374,7 +395,7 @@ h2.hero {
     width: 100%;
     padding: 14px;
     background-image: linear-gradient(to right bottom, #d16ba5, #bf69ae, #aa68b5, #9068bb, #7269be, #5a72c5, #3d79c9, #0080ca, #0090ce, #009ece, #00accb, #2bb8c6);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
 }
@@ -382,13 +403,26 @@ h2.hero {
 .login-form-container form button[type='submit']:hover {
     background-color: lightgreen;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
     margin-top: 20px;
+}
+
+.login-link{
+    color: lightgreen;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.login-link:hover{
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* Navigation */
