@@ -103,7 +103,7 @@ body {
 
 /* Index (Home) Page */
 body.index {
-    background-color: #f4f4f4;
+    background-color: transparent;
 }
 
 body.index .container {
