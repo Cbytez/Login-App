@@ -2,7 +2,7 @@
 
 
 .admin-navbar {
-    background-color: #299aeb;
+    background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
     color: lightgreen;
     padding: 10px;
     border-radius: 5px;
@@ -36,9 +36,13 @@
 }
 
 .admin-ul li a.active {
-    background-color: #299aeb;
-    color: #000;
+    background-color: transparent;
+    color: lightgreen;
     text-decoration: underline;
+    font-size: 1.5rem;
+    box-shadow: 0 0 10px 0 lightgreen;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .admin-main {
@@ -68,10 +72,14 @@
 
 
 body {
-    background-color: #000;
+    background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: lightgreen;
     margin: 0;
     padding-top: 20px;
+    height: 100vh;
 }
 
 .button-container {
@@ -178,13 +186,7 @@ body.index .hero .hero-content .hero-buttons .btn:hover {
 }
 
 /* Register and Login Pages */
-body.register {
-    background-color: #fff3e0;
-}
 
-body.login {
-    background-color: #e0f7fa;
-}
 
 body.register,
 body.login .form-container {
@@ -288,7 +290,7 @@ body.footer p {
 
 .form-button{
     background-color: #333;
-    color: #fff;
+    color: lightgreen;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -301,24 +303,24 @@ body.footer p {
 }
 
 .form-button:hover{
-    background-color: #d16ba5;
-    color: #000;
+    background-color: #3600fb;
+    color: lightgreen;
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .form-container{
-    background-image: linear-gradient(to right bottom, #d16ba5, #bf69ae, #aa68b5, #9068bb, #7269be, #5a72c5, #3d79c9, #0080ca, #0090ce, #009ece, #00accb, #2bb8c6);
+    background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    align-items: center;
     font-size: 1.2rem;
     width: 100%;
     max-width: 400px;
-    margin: 10px auto;
+    margin: 10% auto;
     padding: 20px;
 }
 
@@ -343,6 +345,11 @@ h2.form-container {
     background-color: #fff;
 }
 
+h2{
+    color: lightgreen;
+    text-align: center;
+}
+
 h2.hero {
     color: lightgreen;
     font-size: 2rem;
@@ -351,7 +358,7 @@ h2.hero {
 }
 
 .login-container {
-    background-image: linear-gradient(to right bottom, #d16ba5, #bf69ae, #aa68b5, #9068bb, #7269be, #5a72c5, #3d79c9, #0080ca, #0090ce, #009ece, #00accb, #2bb8c6);
+    background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -367,8 +374,8 @@ h2.hero {
     width: 98%;
 }
 
-.login-form-container {
-    background-image: linear-gradient(to left top, #d16ba5, #bf69ae, #aa68b5, #9068bb, #7269be, #5a72c5, #3d79c9, #0080ca, #0090ce, #009ece, #00accb, #2bb8c6);
+.login-form-container{
+    background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -383,13 +390,17 @@ h2.hero {
 }
 
 .login-form-container form label {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: lightgreen;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 1.5em;
 }
 
-    .login-form-container form input[type='text'],
+.login-form-container form input[type='text'],
 .login-form-container form input[type='password'] {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     width: 75%;
     padding: 10px;
     margin-bottom: 20px;
@@ -399,15 +410,18 @@ h2.hero {
 .login-form-container form button[type='submit'] {
     width: 100%;
     padding: 14px;
-    background-image: linear-gradient(to right bottom, #d16ba5, #bf69ae, #aa68b5, #9068bb, #7269be, #5a72c5, #3d79c9, #0080ca, #0090ce, #009ece, #00accb, #2bb8c6);
-    font-size: 1.2rem;
+    background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
+    font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: lightgreen;
+    border-radius: 5px;
+    width: 75%;
+    margin: 10px auto 0 auto;
 }
 
 .login-form-container form button[type='submit']:hover {
     background-color: lightgreen;
-    color: white;
+    color: lightgreen;
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 5px;
