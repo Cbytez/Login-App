@@ -38,7 +38,10 @@
                     $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$passwordHash', '$email')";
 
                     if(mysqli_query($dbs, $sql)){
-                        echo "User Added successfully";
+                        $_SESSION['logged_in'] = true;
+                        $_SESSION['username'] = $username;
+                        header('Location: admin.php');
+                        exit();
                     }else{
                         echo "Error: NOT INSERTED". mysqli_error($dbs);
                     }
