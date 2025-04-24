@@ -149,6 +149,9 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: color-burn;
     border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-left: 3px solid lightgreen;
+    border-right: 3px solid lightgreen;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -17,8 +17,8 @@
         }else{
 
             //Check if username already exist in the database.
-            $sql = "SELECT * FROM users WHERE username = '$username' LIMIT 1";
-            $result = mysqli_query($dbs, $sql);
+                $sql = "SELECT * FROM users WHERE username = '$username' LIMIT 1";
+                $result = mysqli_query($dbs, $sql);
 
             if(mysqli_num_rows($result) === 1){
                 $error = "Username already exists, Please choose another.";
@@ -34,8 +34,8 @@
                 }else{
                     //Hash the password and insert the data into the database.
                     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-
-                    $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$passwordHash', '$email')";
+                    $user = 'user';
+                    $sql = "INSERT INTO users (username, password, email, user_role) VALUES ('$username', '$passwordHash', '$email', '$user')";
 
                     if(mysqli_query($dbs, $sql)){
                         $_SESSION['logged_in'] = true;
