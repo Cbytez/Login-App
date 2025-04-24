@@ -115,7 +115,7 @@ body {
 
 /* Index (Home) Page Hero Section */
 .hero{
-    width: 98%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -129,31 +129,49 @@ body {
 
 .hero .hero-content h1{
     font-size: 3rem;
+    font-weight: bold;
+   
     
 }
 
 .hero .hero-content p{
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    z-index: 1;
 }
 
 .hero-image{
-    /* background-image: url("../images/hero-image.png"); */
-    background-size: auto 75%;
+    background-image: url("../images/hero-image.png");
+    background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    width: 98%;
-    height: 35rem;
+    background-repeat: repeat;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 10px 0;
+    width: 100%;
+    height: 50rem;
+    text-align: center;
+    position: relative;
+    z-index: -1;
 }
 
 .hero-image-container{
     margin: 0 auto;
     width: 100%;
+    height: 100%;
 }
 
 .hero-image-text{
+    font-size: 2rem;
+    font-weight: bold;
+    color: lightgreen;
     text-align: center;
+    top: 0;
+    position: absolute;
+    z-index: 1;
 }
 
 .index-container{
@@ -161,7 +179,7 @@ body {
     width: 98%;
     height: auto;
     margin: 0 auto;
-    border: 3px solid black;
+    border-radius: 10px;
 }
 
 /* End of Index (Home) Page Hero Section */

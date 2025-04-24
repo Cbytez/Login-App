@@ -6,7 +6,6 @@
         <div class="hero">
           <div class="hero-image-container">
             <div class="hero-image">
-                <!-- <img src="images/hero-image.png" alt="Hero Image"> -->
                 <div class="hero-image-text">
                     <h1>Welcome To Our PHP Login App</h1>
                 </div>
