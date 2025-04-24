@@ -191,6 +191,19 @@ body {
 /* End of Index (Home) Page Hero Section */
 /* Register and Login Pages */
 
+.register-container{
+    background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
+    width: 98%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    border-radius: 10px;
+}
+
 
 body.register,
 body.login .form-container {

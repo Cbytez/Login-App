@@ -66,7 +66,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="register-container">
         <div class="form-container">
 
             <form method="POST" action="">
