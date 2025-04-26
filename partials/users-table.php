@@ -19,6 +19,7 @@
                 <th>Email</th>
                 <th>Registration Date</th>
                 <th>User Role</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -29,6 +30,10 @@
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['reg_date']; ?></td>
                     <td><?php echo $row['user_role']; ?></td>
+                    <td>
+                    <a href="edit-user.php?id=<?php echo $row['user_id']; ?>">Edit</a>
+                    <a href="delete-user.php?id=<?php echo $row['user_id']; ?>">Delete</a>
+                    </td>
                 </tr>
             <?php endwhile; ?>
         </tbody>

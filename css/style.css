@@ -590,8 +590,6 @@ h2.hero {
     width: 98%;
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 lightgreen;
     font-size: 1.2rem;
     font-weight: bold;
 
@@ -609,8 +607,7 @@ h2.hero {
     border-radius: 10px;
     box-shadow: 0 0 10px 0 lightgreen;
     padding: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
+   
 }
 
 .user-table thead{
@@ -620,8 +617,6 @@ h2.hero {
     padding: 10px;
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 lightgreen;
 }
 
 .user-table td{
@@ -633,8 +628,6 @@ h2.hero {
     padding: 10px;
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 lightgreen;
 }
 
 
@@ -646,8 +639,6 @@ h2.hero {
     padding: 10px;
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 lightgreen;
 }
 
 
@@ -660,3 +651,21 @@ h2.hero {
     box-shadow: 0 0 10px 0 lightgreen;
 }
 
+.user-table tbody tr td a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.user-table tbody tr td a:hover{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightgreen;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
+    text-decoration: underline;
+    cursor: pointer;
+}
