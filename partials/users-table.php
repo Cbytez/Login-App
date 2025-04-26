@@ -28,7 +28,7 @@
                     <td><?php echo $row['user_id']; ?></td>
                     <td><?php echo $row['username']; ?></td>
                     <td><?php echo $row['email']; ?></td>
-                    <td><?php echo $row['reg_date']; ?></td>
+                    <td><?php echo full_month_date($row['reg_date']); ?></td>
                     <td><?php echo $row['user_role']; ?></td>
                     <td>
                     <a href="edit-user.php?id=<?php echo $row['user_id']; ?>">Edit</a>

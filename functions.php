@@ -60,4 +60,8 @@
         header("Location: $url");
         exit();
     }
+
+    function full_month_date($date){
+        return date('F j, Y, g:i a', strtotime($date));
+    }
 ?>
