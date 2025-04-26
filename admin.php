@@ -4,11 +4,12 @@
    
 
     if(!isLoggedIn()){
-        header('Location: login.php');
-        exit;
+        redirect('login.php');
     }
 
-    echo $_SESSION['user_role'];
+   
+
+    
     
 ?>
     <div class="container">
@@ -22,7 +23,10 @@
         </div>
         <div class="admin-main">
             <h1>Hello Admin <?php echo $_SESSION['username']; ?></h1>
-           
+            <h2>Welcome to the Admin Panel</h2>
+            
+
+            <?php include "partials/users-table.php"; ?>
         </div>
     </div>
 

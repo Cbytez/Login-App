@@ -59,7 +59,7 @@
 
 .admin-main h1 {
     font-size: 2.2rem;
-    margin-top: 20px;
+    margin:20px 0 0 25px;
 }
 
 .admin-main a {
@@ -562,5 +562,101 @@ h2.hero {
     border-radius: 5px;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+/* Admin Page */
+
+.user-table-container{
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px;
+    
+}
+
+.user-table-container h1{
+    color: lightgreen;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+
+.user-table{
+    background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
+    margin: 0 auto;
+    width: 98%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.user-table body{
+    background-color: #000;
+}
+
+.user-table th{
+    background-color: #000;
+    color: lightgreen;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.user-table thead{
+   background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
+}
+
+.user-table td{
+    color: lightgreen;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
+}
+
+
+
+.user-table tr{
+    background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
+}
+
+
+.user-table tbody tr:hover td{
+    background-color: lightgreen;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 lightgreen;
 }
 

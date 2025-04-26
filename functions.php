@@ -47,4 +47,17 @@
         $stmt->execute([$username]);
         return $stmt->rowCount() > 0;
     }
+
+    function deleteUser($user_id){
+        global $dbs;
+        $sql = "DELETE FROM users WHERE id = ?";
+        $stmt = $dbs->prepare($sql);
+        $stmt->execute([$user_id]);
+        return $stmt->rowCount() > 0;
+    }
+
+    function redirect($url){
+        header("Location: $url");
+        exit();
+    }
 ?>
