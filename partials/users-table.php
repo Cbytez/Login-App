@@ -5,7 +5,18 @@
 
     $result = mysqli_query($dbs, "SELECT user_id, username, email, reg_date, user_role FROM users");
 
-    
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if(isset($_POST['edit_user'])){
+                $user_id = mysqli_real_escape_string($dbs, $_POST['user_id']);
+                $new_email = mysqli_real_escape_string($dbs, $_POST['email']);
+
+                $sql = "UPDATE users SET email = '$new_email' WHERE user_id = '$user_id'";
+                mysqli_query($dbs, $sql);
+
+                redirect("admin.php");
+                exit();
+        }
+    }
 
 ?>
 
@@ -31,8 +42,15 @@
                     <td><?php echo full_month_date($row['reg_date']); ?></td>
                     <td><?php echo $row['user_role']; ?></td>
                     <td>
-                    <a href="edit-user.php?id=<?php echo $row['user_id']; ?>">Edit</a>
-                    <a href="delete-user.php?id=<?php echo $row['user_id']; ?>">Delete</a>
+                        <form method="POST" style="display:inline-block;">
+                            <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
+                            <input type="email" name="email" value="<?php echo $row['email']; ?>" required>
+                            <button class="form-button" type="submit" name="edit_user">Edit</button>
+                        </form>
+                        <form method="POST" style="display:inline-block;" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                            <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
+                            <button class="form-button" type="submit" name="delete_user">Delete</button>
+                        </form>
                     </td>
                 </tr>
             <?php endwhile; ?>
