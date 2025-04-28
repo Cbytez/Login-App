@@ -64,4 +64,12 @@
     function full_month_date($date){
         return date('F j, Y, g:i a', strtotime($date));
     }
+
+    function check_query($result){
+        global $dbs;
+        if(!$result){
+            die("Query Failed: " . mysqli_error($dbs));
+        }
+        return $result;
+    }
 ?>

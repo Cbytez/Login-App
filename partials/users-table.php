@@ -11,9 +11,10 @@
                 $new_email = mysqli_real_escape_string($dbs, $_POST['email']);
 
                 $sql = "UPDATE users SET email = '$new_email' WHERE user_id = '$user_id'";
-                mysqli_query($dbs, $sql);
-
-                redirect("admin.php");
+                $result = mysqli_query($dbs, $sql);
+                if(check_query($result)){
+                    redirect("admin.php");
+                }
                 exit();
         }
     }
