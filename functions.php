@@ -42,10 +42,15 @@
 
     function isAdmin($username = ''){
         global $dbs;
-        $sql = "SELECT * FROM users WHERE username = ? AND user_role = 'admin'";
-        $stmt = $dbs->prepare($sql);
-        $stmt->execute([$username]);
-        return $stmt->rowCount() > 0;
+        $sql = "SELECT user_role FROM users WHERE username = '$username'";
+        $result = mysqli_query($dbs, $sql);
+        $row = mysqli_fetch_assoc($result);
+        
+        if($row['user_role'] === 'admin'){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     function deleteUser($user_id){

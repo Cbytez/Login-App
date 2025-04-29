@@ -31,8 +31,15 @@
             if(password_verify($password, $user['password'])){
                 $_SESSION['logged_in'] = true;
                 $_SESSION['username'] = $user['username'];
-                $_SESSION['user_role'] = $user['role'];
-                header('Location: admin.php');
+                $_SESSION['user_role'] = $user['user_role'];
+                
+                if(isAdmin($_SESSION['username'])){
+                    header('Location: admin.php');
+                    exit;
+                }else{
+                    header('Location: index.php');
+                    exit;
+                }
             }else{
                 $error = "Invalid Password!";
             }            
