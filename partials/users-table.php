@@ -13,9 +13,23 @@
                 $sql = "UPDATE users SET email = '$new_email' WHERE user_id = '$user_id'";
                 $result = mysqli_query($dbs, $sql);
                 if(check_query($result)){
+                    $_SESSION['notification'] = "User updated successfully";
+                    $_SESSION['notification_type'] = "success";
                     redirect("admin.php");
                 }
                 exit();
+        }
+
+        if(isset($_POST['delete_user'])){
+            $user_id = mysqli_real_escape_string($dbs, $_POST['user_id']);
+            $sql = "DELETE FROM users WHERE user_id = '$user_id'";
+            $result = mysqli_query($dbs, $sql);
+            if(check_query($result)){
+                $_SESSION['notification'] = "User deleted successfully";
+                $_SESSION['notification_type'] = "success";
+                redirect("admin.php");
+            }
+            exit();
         }
     }
 
@@ -23,6 +37,14 @@
 
 <div class="user-table-container">
     <h1>Manage Users</h1>
+
+    <?php if(isset($_SESSION['notification'])): ?>
+        <div class="notification <?php echo $_SESSION['notification_type']; ?>">
+            <?php echo $_SESSION['notification']; ?>
+            <?php unset($_SESSION['notification']); ?>
+        </div>
+    <?php endif; ?>
+
     <table class="user-table">
         <thead>
             <tr>

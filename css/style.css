@@ -509,6 +509,33 @@ h2.hero {
     margin-top: 20px;
 }
 
+/* Notification Section */
+.notification{
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px 0 20px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 97.25%;
+    align-items: center;
+}
+
+.notification.success{
+    background-color: #008000;
+    color: #fff;
+}
+
+.notification.error{
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.notification.warning{
+    background-color: #ffa500;
+    color: #fff;
+}
+
 .register-link a {
     color: lightgreen;
     text-decoration: none;
