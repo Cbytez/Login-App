@@ -72,7 +72,7 @@
                         </form>
                         <form method="POST" style="display:inline-block;" onsubmit="return confirm('Are you sure you want to delete this user?');">
                             <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
-                            <button class="form-button" type="submit" name="delete_user">Delete</button>
+                            <button class="form-button-delete" type="submit" name="delete_user">Delete</button>
                         </form>
                     </td>
                 </tr>

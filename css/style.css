@@ -317,12 +317,32 @@ footer p {
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-    
-
-}
+}   
 
 .form-button:hover{
     background-color: #3600fb;
+    color: lightgreen;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form-button-delete{
+    background-color: #333;
+    color: lightgreen;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-button-delete:hover{
+    background-color: red;
     color: lightgreen;
     font-size: 1.5rem;
     font-weight: bold;
