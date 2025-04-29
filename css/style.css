@@ -362,6 +362,7 @@ h2.form-container {
     font-size: 1.5rem;
     transition: background-color 0.3s ease;
     background-color: #fff;
+    color: black;
 }
 
 h2{
