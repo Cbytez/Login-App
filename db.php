@@ -1,6 +1,11 @@
 <?php
 
-    $dbs = mysqli_connect("localhost", "Fatality", "Yennefer0974", "Login_App");
+    $host = "localhost";
+    $username = "Fatality";
+    $password = "Yennefer0974";
+    $database = "Login_App";
+
+    $dbs = mysqli_connect($host, $username, $password, $database);
 
     // if($dbs){
     //     echo "Connected to the database successfully";
