@@ -31,6 +31,25 @@
             }
             exit();
         }
+
+        // Create user.
+        if(isset($_POST['create_user'])){
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $email = $_POST['email'];
+            $user_role = $_POST['user_role'];
+
+            $stmt = mysqli_prepare($dbs, "INSERT INTO users (username, password, email, user_role) VALUES (?, ?, ?, ?)");
+            mysqli_stmt_bind_param($stmt, "ssss", $username, $password, $email, $user_role);
+            mysqli_stmt_execute($stmt);
+            if(mysqli_stmt_affected_rows($stmt) > 0){
+                $_SESSION['notification'] = "User created successfully";
+                $_SESSION['notification_type'] = "success";
+                redirect("admin.php");
+            }
+            exit();
+        }
+
     }
 
 ?>
@@ -80,3 +99,32 @@
         </tbody>
     </table>
 </div>
+<hr>
+<!-- Create user form. -->
+<div class="create-user-container">
+    <h1>Create User</h1>
+    <div class="user-form-container">
+    <form action="admin.php" method="post">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="user_role">User Role</label>
+            <input type="text" name="user_role" placeholder="User Role">
+        </div>
+        <input type="submit" name="create_user" value="Create User">
+    </form>
+</div>
+<hr>
+<br>
+<?php include "partials/footer.php"; ?>
+

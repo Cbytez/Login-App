@@ -289,6 +289,99 @@ body.register-link{
     font-weight: bold;
 }
 
+.create-user-container{
+    background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 98%;
+    margin: 0 auto 20px auto;
+    padding-bottom: 10px;
+}
+
+.user-form-container{
+    /* background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb); */
+    background-color: transparent;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.user-form-container form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    width: auto;
+}
+
+.user-form-container form input[type='text'],
+.user-form-container form input[type='email'],
+.user-form-container form input[type='password']{
+    width: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightgreen;
+    background-color: #fff;
+    color: black;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-form-container form input[type='submit']{
+    width: 15rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightgreen;
+    background-color: #333;
+   
+}
+
+.user-form-container form input[type='submit']:hover{
+    background-color: lightgreen;
+    color: lightgreen;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: black;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.user-form-container form label{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightgreen;
+    margin: 0 auto;
+    padding: 5px 20px 5px 10px;
+    
+
+}
+
 
 /* Footer */
 footer {
@@ -368,6 +461,16 @@ h2.form-container {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+hr{
+    width: 100%;
+    height: 5px;
+    background-color: lightgreen;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 98%;
 }
 
 .form-container input[type='text'],

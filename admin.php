@@ -7,7 +7,9 @@
         redirect('login.php');
     }
 
-   
+    if($_SESSION['user_role'] === 'user'){
+        redirect('index.php');
+    }
 
     
     
@@ -28,6 +30,9 @@
             
 
             <?php include "partials/users-table.php"; ?>
+            <hr>
+            <br>
+            <?php include "partials/create-user.php"; ?>
         </div>
     </div>
 

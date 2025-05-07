@@ -1,6 +1,14 @@
 <?php include "partials/header.php"; ?>
 
 
+<?php
+    if(isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'){
+        redirect('admin.php');
+    }
+
+    
+?>
+
     <div class="index-container">
         <?php include "partials/navigation.php"; ?>
         <div class="hero">
