@@ -39,8 +39,11 @@
             $email = $_POST['email'];
             $user_role = $_POST['user_role'];
 
+
+            //Hash the password and insert the data into the database.
+            $passwordHash = password_hash($password, PASSWORD_DEFAULT);
             $stmt = mysqli_prepare($dbs, "INSERT INTO users (username, password, email, user_role) VALUES (?, ?, ?, ?)");
-            mysqli_stmt_bind_param($stmt, "ssss", $username, $password, $email, $user_role);
+            mysqli_stmt_bind_param($stmt, "ssss", $username, $passwordHash, $email, $user_role);
             mysqli_stmt_execute($stmt);
             if(mysqli_stmt_affected_rows($stmt) > 0){
                 $_SESSION['notification'] = "User created successfully";
@@ -124,7 +127,6 @@
         <input type="submit" name="create_user" value="Create User">
     </form>
 </div>
-<hr>
 <br>
 <?php include "partials/footer.php"; ?>
 
