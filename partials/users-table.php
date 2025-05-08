@@ -32,12 +32,12 @@
             exit();
         }
 
-        // Create user.
+        // Create user with validation and prevent SQL injection.
         if(isset($_POST['create_user'])){
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-            $email = $_POST['email'];
-            $user_role = $_POST['user_role'];
+            $username = mysqli_real_escape_string($dbs, $_POST['username']);
+            $password = mysqli_real_escape_string($dbs, $_POST['password']);
+            $email = mysqli_real_escape_string($dbs, $_POST['email']);
+            $user_role = mysqli_real_escape_string($dbs, $_POST['user_role']);
 
 
             //Hash the password and insert the data into the database.

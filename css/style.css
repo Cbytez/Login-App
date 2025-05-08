@@ -188,6 +188,22 @@ body {
     border-radius: 10px;
 }
 
+.index-link{
+    color: orange;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    font-weight: bold;
+   
+}
+
+.index-link:hover{
+    color: #b11010;
+}
+
+
+
+
+
 /* End of Index (Home) Page Hero Section */
 /* Register and Login Pages */
 
