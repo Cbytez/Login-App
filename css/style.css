@@ -141,6 +141,13 @@ body {
     z-index: 1;
 }
 
+.hero-content-text{
+    color: lightgreen;
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
 .hero-image{
     background-image: url("../images/hero-image.png");
     background-size: contain;
@@ -188,16 +195,16 @@ body {
     border-radius: 10px;
 }
 
-.index-link{
+.index-place{
     color: orange;
-    text-decoration: underline;
+    
     font-size: 1.5rem;
     font-weight: bold;
    
 }
 
-.index-link:hover{
-    color: #b11010;
+.index-place:hover{
+    color: #000;
 }
 
 
