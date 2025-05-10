@@ -861,3 +861,44 @@ input[type="email"]{
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* Read User Page */
+
+.read-user-container{
+    /* background-image: linear-gradient(to right bottom, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb); */
+    margin: 0 auto;
+    width: 98%;
+    padding: 10px;
+}
+
+.read-user-card{
+    background-image: linear-gradient(to left top, #070707, #19162f, #281e54, #3d2379, #58249f, #6320b2, #6e19c6, #7b0ad9, #7103e1, #6300e9, #5200f2, #3600fb);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 black;
+    color: lightgreen;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.read-user-card h2{
+    color: lightgreen;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    width: 98%;
+}
+
+.read-user-card p{
+    color: lightgreen;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0 0 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* End of Read User Page */
