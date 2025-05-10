@@ -18,6 +18,8 @@
             $stmt->execute([$username, $password, $email, $reg_date, $user_role]);
             echo "<p>User created successfully</p>";
             echo "<a href='read-user.php'>Read User</a>";
+        }else{
+            echo "<p>User creation failed</p>";
         }
         mysqli_close($dbs);
     ?>
