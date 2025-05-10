@@ -90,7 +90,7 @@
                         <form method="POST" style="display:inline-block;">
                             <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
                             <input type="email" name="email" value="<?php echo $row['email']; ?>" required>
-                            <button class="form-button" type="submit" name="edit_user">Edit</button>
+                            <button class="form-button" type="submit" name="edit_user">Update</button>
                         </form>
                         <form method="POST" style="display:inline-block;" onsubmit="return confirm('Are you sure you want to delete this user?');">
                             <input type="hidden" name="user_id" value="<?php echo $row['user_id']; ?>">
