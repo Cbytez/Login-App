@@ -22,7 +22,7 @@
                 <?php if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true): ?>
                     <h1 class="hero-content-text">Welcome <?php echo $_SESSION['username']; ?></h1>
                     <br>
-                    <a href="create-user.php" class="index-place">Create User</a>
+                    <a href="create-user.php" class="index-place">Check Users</a>
                     <br>
                     <a href="read-user.php" class="index-place">Read User</a>   
                 <?php endif; ?>

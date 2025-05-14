@@ -4,25 +4,39 @@
 ?>
 
 <div class="index-container">
-    <h1>Create User</h1>
+    <h2>User Record</h2>
     <br>
-    <!-- create user using prepared statements   -->
-    <?php
-       $stmt = $dbs->prepare("INSERT INTO users (username, password, email, reg_date, user_role) VALUES (?, ?, ?, ?, ?)");
-        if($stmt){
-            $username = "Johnny Walker";
-            $email = "JWalker@gmail.com";
-            $password = "JWalker123";
-            $reg_date = date("Y-m-d H:i:s");
-            $user_role = "user";
-            $stmt->execute([$username, $password, $email, $reg_date, $user_role]);
-            echo "<p>User created successfully</p>";
-            echo "<a href='read-user.php'>Read User</a>";
-        }else{
-            echo "<p>User creation failed</p>";
-        }
-        mysqli_close($dbs);
-    ?>
+    <table class="user-table">
+        <thead>
+            <tr>
+                
+                <th>Username</th>
+                <th>Email</th>
+                <th>Registration Date</th>
+                <th>User Role</th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            <!-- user record from database with prepared statements. --> 
+            <?php
+                $stmt = $dbs->prepare("SELECT * FROM users");
+                $stmt->execute();
+                $result = $stmt->get_result();
+                while($row = mysqli_fetch_assoc($result)){
+                    echo "<tr>";
+                   echo "<td>".$row['username']."</td>";
+                    echo "<td>".$row['email']."</td>";
+                    echo "<td>".$row['reg_date']."</td>";
+                    echo "<td>".$row['user_role']."</td>";
+                    echo "</tr>";
+                }
+            ?>
+            </tr>
+    </tbody>
+    </table>
+    
     
     </div>
 
