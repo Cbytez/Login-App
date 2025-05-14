@@ -32,6 +32,7 @@
                     echo "<td>".$row['user_role']."</td>";
                     echo "</tr>";
                 }
+                mysqli_stmt_close($stmt);
             ?>
             </tr>
     </tbody>
