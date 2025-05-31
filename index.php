@@ -27,6 +27,7 @@
                     <a href="read-user.php" class="index-place">Read User</a>   
                 <?php endif; ?>
                 <p>Securely login and manage your account with us.</p>
+                
             </div>
           </div>
         </div>
